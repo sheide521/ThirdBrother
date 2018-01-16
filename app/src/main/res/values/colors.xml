@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="app_color">#f4ea2a</color>
+    <color name="white">#ffffff</color>
+    <color name="list_line">#ececec</color>
+    <color name="all_six">#666666</color>
+    <color name="all_night">#888888</color>
+    <color name="all_nice">#999999</color>
+    <color name="all_zero">#000000</color>
+    <color name="all_three">#333333</color>
+    <color name="bg_color">#f2f2f2</color>
+    <color name="normal">#2b353e</color>
+    <color name="orange">#FBB100</color>
+    <color name="all_c">#cccccc</color>
+    <color name="er_code_text">#9b9b9b</color>
+    <color name="red_dot">#f54945</color>
+    <color name="main_no_chick">#808080</color>
+    <color name="all_c2">#c2c2c2</color>
+    <color name="main_icon_text_chick">#442509</color>
+    <color name="Primary_color">#FDF187</color>
+    <color name="Primary_normal_color">#F7E003</color>
+    <color name="status_color">#f8dc00</color>
+    <color name="all_ae">#aeaeae</color>
+    <color name="all_f9">#f9f9f9</color>
+    <color name="all_ef">#efefef</color>
+    <color name="all_e7">#e7e7e7</color>
+    <color name="all_76">#767676</color>
+    <color name="all_e2">#e2e2e2</color>
+    <color name="all_cd">#cdcdcd</color>
+    <color name="all_c7">#c7c7c7</color>
+    <color name="all_f3">#f3f3f3</color>
+    <color name="all_d7">#d7d7d7</color>
+    <color name="all_b">#bbbbbb</color>
+    <color name="all_a">#aaaaaa</color>
+    <color name="all_f5">#f5f5f5</color>
+    <color name="all_6d">#6d6d6d</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#ffcccccc</color>
+
+</resources>

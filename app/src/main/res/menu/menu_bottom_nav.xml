@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_nav_main"
+        android:icon="@drawable/ic_menu_main"
+        android:title="@string/menu_main"/>
+
+    <item
+        android:id="@+id/bottom_nav_news"
+        android:icon="@drawable/ic_menu_news"
+        android:title="@string/menu_news"/>
+
+    <item
+        android:id="@+id/bottom_nav_me"
+        android:icon="@drawable/ic_icon_menu_me"
+        android:title="@string/menu_me"/>
+
+</menu>
