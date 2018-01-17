@@ -7,15 +7,18 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * @author zhaolong
+ * 卡片
  */
 
 public class CardLayoutManager extends RecyclerView.LayoutManager {
 
     private RecyclerView mRecyclerView;
     private ItemTouchHelper mItemTouchHelper;
+    private TextView textView;
 
     public CardLayoutManager(RecyclerView recyclerView, ItemTouchHelper itemTouchHelper) {
         this.mRecyclerView = recyclerView;

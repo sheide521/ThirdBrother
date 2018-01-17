@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.zl.third.brother.R;
 import com.zl.third.brother.activity.CardViewActivity;
 import com.zl.third.brother.activity.ConstraintLayoutTestActivity;
+import com.zl.third.brother.activity.SearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,8 @@ public class NewsFragment extends BaseFragment {
     TextView tvConstraintLayout;
     @Bind(R.id.tv_card_view_new)
     TextView tvCardViewNew;
+    @Bind(R.id.tv_city)
+    TextView tvCity;
 
     private List<String> mDatas;
     private HomeAdapter mAdapter;
@@ -49,7 +52,7 @@ public class NewsFragment extends BaseFragment {
 
     protected void initData() {
         mDatas = new ArrayList<String>();
-        for (int i = 'A'; i < 'G'; i++) {
+        for (int i = 'A'; i < 'Z'; i++) {
             mDatas.add("" + (char) i);
         }
     }
@@ -89,7 +92,7 @@ public class NewsFragment extends BaseFragment {
         }
     }
 
-    @OnClick({R.id.tv_constraintLayout, R.id.tv_card_view_new})
+    @OnClick({R.id.tv_constraintLayout, R.id.tv_card_view_new, R.id.tv_city})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_constraintLayout:
@@ -97,6 +100,9 @@ public class NewsFragment extends BaseFragment {
                 break;
             case R.id.tv_card_view_new:
                 startActivity(new Intent(bActivity, CardViewActivity.class));
+                break;
+            case R.id.tv_city:
+                startActivity(new Intent(bActivity, SearchActivity.class));
                 break;
             default:
                 break;
