@@ -48,6 +48,7 @@ public class NewsFragment extends BaseFragment {
         recyclerView.setAdapter(mAdapter = new HomeAdapter());
         initData();
         return view;
+        
     }
 
     protected void initData() {
