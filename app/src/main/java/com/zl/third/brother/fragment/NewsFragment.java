@@ -47,7 +47,7 @@ public class NewsFragment extends BaseFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(bActivity));
         recyclerView.setAdapter(mAdapter = new HomeAdapter());
         initData();
-        
+
         return view;
 
     }
