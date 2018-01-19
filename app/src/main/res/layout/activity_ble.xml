@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zl.third.brother.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_open_ble"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_space40"
+        android:layout_marginTop="@dimen/distance_space45"
+        android:background="@color/app_color"
+        android:gravity="center"
+        android:text="打开蓝牙" />
+
+    <TextView
+        android:id="@+id/tv_scan_ble"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_space40"
+        android:layout_marginTop="@dimen/distance_space1"
+        android:background="@color/app_color"
+        android:gravity="center"
+        android:text="扫描设备" />
+
+    <TextView
+        android:id="@+id/tv_stop_ble"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_space40"
+        android:layout_marginTop="@dimen/distance_space1"
+        android:background="@color/app_color"
+        android:gravity="center"
+        android:text="停止扫描" />
+
+</LinearLayout>

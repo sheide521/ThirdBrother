@@ -76,19 +76,19 @@ public class LoginActivity extends BaseActivity {
                 ctView.start();
                 break;
             case R.id.tv_login:
-                String account = tlAccount.getEditText().getText().toString();
-                String pwd = tlPwd.getEditText().getText().toString();
-                if (TextUtils.isEmpty(account)) {
-                    tlAccount.setError("账户不对");
-                    return;
-                }
-                tlAccount.setErrorEnabled(false);
-
-                if (TextUtils.isEmpty(pwd)) {
-                    tlPwd.setError("密码不对");
-                    return;
-                }
-                tlPwd.setErrorEnabled(false);
+//                String account = tlAccount.getEditText().getText().toString();
+//                String pwd = tlPwd.getEditText().getText().toString();
+//                if (TextUtils.isEmpty(account)) {
+//                    tlAccount.setError("账户不对");
+//                    return;
+//                }
+//                tlAccount.setErrorEnabled(false);
+//
+//                if (TextUtils.isEmpty(pwd)) {
+//                    tlPwd.setError("密码不对");
+//                    return;
+//                }
+//                tlPwd.setErrorEnabled(false);
 
                 Intent intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);

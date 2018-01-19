@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.zl.third.brother.R;
 import com.zl.third.brother.activity.CardViewActivity;
 import com.zl.third.brother.activity.ConstraintLayoutTestActivity;
-import com.zl.third.brother.activity.SearchActivity;
+import com.zl.third.brother.activity.BleActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class NewsFragment extends BaseFragment {
 
     protected void initData() {
         mDatas = new ArrayList<String>();
-        for (int i = 'A'; i < 'Z'; i++) {
+        for (int i = 'A'; i < 'G'; i++) {
             mDatas.add("" + (char) i);
         }
     }
@@ -104,7 +104,7 @@ public class NewsFragment extends BaseFragment {
                 startActivity(new Intent(bActivity, CardViewActivity.class));
                 break;
             case R.id.tv_city:
-                startActivity(new Intent(bActivity, SearchActivity.class));
+                startActivity(new Intent(bActivity, BleActivity.class));
                 break;
             default:
                 break;

@@ -53,6 +53,6 @@
         android:layout_marginTop="@dimen/distance_space5"
         android:background="@color/app_color"
         android:gravity="center"
-        android:text="上海" />
+        android:text="蓝牙" />
 
 </LinearLayout>
