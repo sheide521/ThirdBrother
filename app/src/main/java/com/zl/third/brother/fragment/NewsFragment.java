@@ -10,9 +10,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.zl.third.brother.R;
+import com.zl.third.brother.activity.BleActivity;
 import com.zl.third.brother.activity.CardViewActivity;
 import com.zl.third.brother.activity.ConstraintLayoutTestActivity;
-import com.zl.third.brother.activity.BleActivity;
+import com.zl.third.brother.activity.WebActivity;
+import com.zl.third.brother.activity.ZhifubaoActivity;
+import com.zl.third.brother.utils.netty.NettyTCPClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +39,10 @@ public class NewsFragment extends BaseFragment {
     TextView tvCardViewNew;
     @Bind(R.id.tv_city)
     TextView tvCity;
+    @Bind(R.id.tv_netty)
+    TextView tvNetty;
+    @Bind(R.id.tv_web)
+    TextView mTvWeb;
 
     private List<String> mDatas;
     private HomeAdapter mAdapter;
@@ -94,7 +101,8 @@ public class NewsFragment extends BaseFragment {
         }
     }
 
-    @OnClick({R.id.tv_constraintLayout, R.id.tv_card_view_new, R.id.tv_city})
+    @OnClick({R.id.tv_constraintLayout, R.id.tv_card_view_new, R.id.tv_city, R.id.tv_netty, R.id.tv_web,
+            R.id.tv_zhifubao})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_constraintLayout:
@@ -105,6 +113,22 @@ public class NewsFragment extends BaseFragment {
                 break;
             case R.id.tv_city:
                 startActivity(new Intent(bActivity, BleActivity.class));
+                break;
+            case R.id.tv_netty:
+                //                new Thread(new Runnable() {
+                //                    @Override
+                //                    public void run() {
+                NettyTCPClient.goNet();
+                //                    }
+                //                }).start();
+                //                System.out.println("Client：");
+                //                Log.d("123","Client：" );
+                break;
+            case R.id.tv_web:
+                startActivity(new Intent(bActivity, WebActivity.class));
+                break;
+            case R.id.tv_zhifubao:
+                startActivity(new Intent(bActivity, ZhifubaoActivity.class));
                 break;
             default:
                 break;

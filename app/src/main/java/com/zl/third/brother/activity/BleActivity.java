@@ -2,12 +2,7 @@ package com.zl.third.brother.activity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothGatt;
-import android.bluetooth.BluetoothGattCallback;
-import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothManager;
-import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,7 +12,6 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,9 +28,6 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static android.bluetooth.BluetoothAdapter.STATE_CONNECTED;
-import static android.telecom.Call.STATE_DISCONNECTED;
 
 /**
  * Created by zhaolong on
@@ -162,8 +153,8 @@ public class BleActivity extends BaseActivity {
             }
 
             @Override
-            public void onItemClickListener(int position) {
-                BluetoothDevice device = mDatas.get(position);
+                public void onItemClickListener(int position) {
+                    BluetoothDevice device = mDatas.get(position);
 
                 if (device == null) return;
                 final Intent intent = new Intent(bActivity, DeviceControlActivity.class);

@@ -76,6 +76,18 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
+        <!---->
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!--仿支付宝-->
+        <activity
+            android:name=".activity.ZhifubaoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
         <service
             android:name=".utils.bluetooth.BluetoothLeService"
             android:enabled="true" />

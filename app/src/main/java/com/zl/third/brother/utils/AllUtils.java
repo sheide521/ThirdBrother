@@ -8,6 +8,8 @@ import android.content.Context;
 
 public class AllUtils {
 
+    public static final int MSGID =3;
+
     public static String getPageNmae(Context context) {
         return context.getPackageName();
     }

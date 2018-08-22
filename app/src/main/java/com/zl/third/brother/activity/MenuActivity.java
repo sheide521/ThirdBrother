@@ -52,7 +52,7 @@ public class MenuActivity extends BaseActivity {
         bvButton.enableShiftingMode(false);
         bvButton.enableItemShiftingMode(false);
         addBadgeAt(1, 1);
-
+        bvButton.setSelectedItemId(bvButton.getMenu().getItem(2).getItemId());
     }
 
     private Badge addBadgeAt(int position, int number) {

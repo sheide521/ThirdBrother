@@ -2,11 +2,14 @@ package com.zl.third.brother.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.IntRange;
+import android.support.annotation.IntegerRes;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -16,12 +19,14 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.zl.third.brother.R;
+import com.zl.third.brother.adapter.MyAdapter;
 import com.zl.third.brother.listener.AppBarStateChangeListener;
 import com.zl.third.brother.widghts.banner.BannerView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -45,6 +50,8 @@ public class MainFragment extends BaseFragment {
     Toolbar ctlToolbar;
 
     private TabLayout tabLayout;
+    private ViewPager pager;
+    private List<String> list;
 
     public String[] titles = new String[]{
             "湖人12月19日退役科比球衣 8号24号同时升空",
@@ -109,6 +116,7 @@ public class MainFragment extends BaseFragment {
     }
 
     private void initData(final View view) {
+        this.pager = view.findViewById(R.id.pager);
         bannerView.setNoTitleMode(false);//是否显示文字
         final List<BannerView.BannerInfo> infos = new ArrayList<>();
         for (int i = 0; i < imageUrls.length; i++) {
@@ -137,7 +145,56 @@ public class MainFragment extends BaseFragment {
         tabLayout.addTab(tabLayout.newTab().setText("Tab 13"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 14"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 15"));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                Toast.makeText(getActivity(),tab.getPosition()+"",500).show();
+//                switch (tab.getPosition()){
+//                    case 0:
+//
+//                        break;
+//                    case 1:
+//                        tabDetail.setTextColor(getResources().getColor(R.color.c8));
+//                        tabDetail.setTextSize(18);
+//                        break;
+//                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+           /*初始化数据*/
+//        initViewPagerData();
+//        /*设置Adapter*/
+//        pager.setAdapter(new MyAdapter(this.getChildFragmentManager(), list));
+//        /*Tab与ViewPager绑定*/
+//        tabLayout.setupWithViewPager(pager);
+
+        testDo(1);
     }
+
+    private void testDo(@IntRange(from = 1,to = 100)int s){
+Log.e("123","------------->"+s);
+    }
+
+    /*初始化数据*/
+    private void initViewPagerData() {
+        list = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            list.add(String.format(Locale.CHINA, "第%02d页", i));
+
+        }
+    }
+
 
     @Override
     public void onDestroyView() {

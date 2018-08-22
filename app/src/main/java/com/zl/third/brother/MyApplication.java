@@ -3,6 +3,7 @@ package com.zl.third.brother;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
@@ -12,7 +13,7 @@ import com.zl.third.brother.utils.Permisson.Utils;
 /**
  * Created by zhenfei.wang on 2016/8/8.
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     private final String TAG = getClass().getSimpleName();
     private static MyApplication application;
 
